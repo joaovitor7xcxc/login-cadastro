@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block title %}Login{% endblock %}
+
+{% block content %}
+
+<div class="login-container">
+    <div class="login-card">
+        <h2>Login</h2>
+
+        <form method="POST">
+            <input type="text" name="cpf" placeholder="CPF" required>
+            <input type="password" name="senha" placeholder="Senha" required>
+            <button type="submit">Entrar</button>
+        </form>
+
+        {% with messages = get_flashed_messages(with_categories=true) %}
+          {% for categoria, mensagem in messages %}
+            <p class="erro">{{ mensagem }}</p>
+          {% endfor %}
+        {% endwith %}
+    </div>
+</div>
+
+{% endblock %}

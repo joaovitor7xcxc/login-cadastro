@@ -1,0 +1,37 @@
+<h2>Cadastro</h2>
+
+<form method="POST">
+
+    <div>
+        <input type="text" name="nome" placeholder="Nome"
+               value="{{ request.form.nome }}" required>
+    </div><br>
+
+    <div>
+        <input type="text" name="cpf" placeholder="CPF"
+               value="{{ request.form.cpf }}" required>
+    </div><br>
+
+    <div>
+        <input type="email" name="email" placeholder="Email"
+               value="{{ request.form.email }}" required>
+    </div><br>
+
+    <div>
+        <input type="number" name="idade" placeholder="Idade"
+               value="{{ request.form.idade }}" required>
+    </div><br>
+
+    <div>
+        <input type="password" name="senha" placeholder="Senha" required>
+    </div><br>
+
+    <button type="submit">Cadastrar</button>
+
+</form>
+
+{% with messages = get_flashed_messages(with_categories=true) %}
+  {% for categoria, mensagem in messages %}
+    <p style="color:red;">{{ mensagem }}</p>
+  {% endfor %}
+{% endwith %}

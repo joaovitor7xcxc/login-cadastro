@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista de Usuários</title>
+</head>
+<body>
+
+    <h2>Lista de Usuários</h2>
+
+    <h3>Total de usuários: {{ total }}</h3>
+
+    <table border="1" cellpadding="5">
+        <tr>
+            <th>Nome</th>
+            <th>CPF</th>
+            <th>Email</th>
+            <th>Idade</th>
+        </tr>
+
+        {% for usuario in usuarios %}
+        <tr>
+            <td>{{ usuario.nome }}</td>
+            <td>{{ usuario.cpf }}</td>
+            <td>{{ usuario.email }}</td>
+            <td>{{ usuario.idade }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    <br>
+    <a href="/">Voltar para Home</a>
+
+    <br><br>
+
+    {% with messages = get_flashed_messages(with_categories=true) %}
+      {% for categoria, mensagem in messages %}
+        <p>{{ mensagem }}</p>
+      {% endfor %}
+    {% endwith %}
+
+</body>
+</html>

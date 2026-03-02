@@ -1,0 +1,9 @@
+[
+    {
+        "nome": "joao",
+        "cpf": "12785692438",
+        "email": "joaovitorxis7x@gmail.com",
+        "idade": "29",
+        "senha": "scrypt:32768:8:1$45TveGoJ9HKGg0tC$c90fb42aaa5f60444ab9a5df0ad8231c894c2f34e262051b042eafa228e536feb9c39218e58c5bb94007c1037b0c40a0f89ba71e2e5e4307cc24f5393bdbaac8"
+    }
+]
